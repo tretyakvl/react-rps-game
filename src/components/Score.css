@@ -1,0 +1,52 @@
+.Score {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0.7rem 0.65rem;
+
+  line-height: 1;
+
+  border: 3px solid hsl(217, 16%, 45%);
+  border-radius: 0.4em;
+}
+
+.Score__header {
+  padding: 0 0.7rem;
+  margin: 0;
+
+  color: var(--lightText);
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 0.8;
+  text-transform: uppercase;
+}
+
+.Score__header > span {
+  display: block;
+}
+
+.Score__display {
+  padding: 0.5rem 1.45rem;
+
+  color: var(--textDark);
+  text-align: center;
+
+  background-color: var(--lightText);
+  border-radius: 0.2em;
+}
+
+.Score__name {
+  display: block;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: lowercase;
+}
+
+.Score__stat {
+  display: block;
+
+  font-size: 2.5rem;
+  font-weight: 700;
+}
