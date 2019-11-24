@@ -1,7 +1,15 @@
 .Game {
-  width: 100vw;
   height: 100vh;
+  max-width: 1366px;
+  margin: 0 auto;
   padding: 1.95rem;
 
-  background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  background: radial-gradient(circle at top center, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  background-size: 100% 100%;
+}
+
+@media (min-width: 500px) {
+  .Game {
+    padding: 2.9rem 1.95rem;
+  }
 }

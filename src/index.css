@@ -8,7 +8,9 @@
 
 body {
   box-sizing: border-box;
+  min-width: 360px;
   margin: 0;
+
   font-family: 'Barlow Semi Condensed', Arial, sans-serif;
   font-weight: 600;
   -webkit-font-smoothing: antialiased;
