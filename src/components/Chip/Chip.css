@@ -1,0 +1,42 @@
+.Chip {
+  display: flex;
+
+  width: 8.125rem;
+  height: 8.125rem;
+  padding: 1rem;
+
+  background: linear-gradient(to top, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+  border-radius: 50%;
+  box-shadow: 0 6px hsl(230, 64%, 46%),
+              0 10px 4px hsla(0, 0%, 0%, 0.2);
+
+  cursor: pointer;
+  transition: box-shadow 200ms ease-out;
+}
+
+.Chip__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+
+
+  background: linear-gradient(to top, hsl(280, 11%, 95%), hsl(0, 0%, 86%));
+  border-radius: 50%;
+  box-shadow: 0 6px hsl(230, 21%, 78%) inset;
+
+  transition: box-shadow 200ms ease-out;
+}
+
+.Chip__image img {
+  width: 2.81rem;
+  height: auto;
+}
+
+.Chip:active {
+  box-shadow: none;
+}
+
+.Chip:active .Chip__image {
+  box-shadow: none;
+}
