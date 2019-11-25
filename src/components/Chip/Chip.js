@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import paper from './icon-paper.svg'
 import lizard from './icon-lizard.svg'
 import rock from './icon-rock.svg'
@@ -7,36 +8,27 @@ import spock from './icon-spock.svg'
 
 import './Chip.css'
 
+const links = {
+  paper,
+  lizard,
+  rock,
+  scissors,
+  spock
+}
+
 const Chip = props => {
+  const { type } = props
   return (
-    <div>
-      <a className='Chip'>
-        <div className='Chip__image'>
-          <img src={paper} alt='Paper' width='49' height='59' />
-        </div>
-      </a>
-      <a className='Chip Chip--scissors'>
-        <div className='Chip__image'>
-          <img src={scissors} alt='Paper' width='49' height='59' />
-        </div>
-      </a>
-      <a className='Chip Chip--rock'>
-        <div className='Chip__image'>
-          <img src={rock} alt='Paper' width='49' height='59' />
-        </div>
-      </a>
-      <a className='Chip Chip--lizard'>
-        <div className='Chip__image'>
-          <img src={lizard} alt='Paper' width='49' height='59' />
-        </div>
-      </a>
-      <a className='Chip Chip--spock'>
-        <div className='Chip__image'>
-          <img src={spock} alt='Paper' width='49' height='59' />
-        </div>
-      </a>
-    </div>
+    <a className={`Chip Chip--${type}`}>
+      <div className='Chip__image'>
+        <img src={links[type]} alt='Paper' width='49' height='59' />
+      </div>
+    </a>
   )
+}
+
+Chip.propTypes = {
+  type: PropTypes.oneOf(['lizard', 'paper', 'rock', 'scissors', 'spock']).isRequired
 }
 
 export default Chip
