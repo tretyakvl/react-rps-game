@@ -4,11 +4,11 @@
   width: 8.125rem;
   height: 8.125rem;
   padding: 1rem;
+  margin-bottom: 1rem;
 
   background: linear-gradient(to top, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
   border-radius: 50%;
-  box-shadow: 0 6px hsl(230, 64%, 46%),
-              0 10px 4px hsla(0, 0%, 0%, 0.2);
+  box-shadow: 0 6px hsl(230, 64%, 46%), 0 10px 4px hsla(0, 0%, 0%, 0.2);
 
   cursor: pointer;
   transition: box-shadow 200ms ease-out;
@@ -19,7 +19,6 @@
   align-items: center;
   justify-content: center;
   flex-grow: 1;
-
 
   background: linear-gradient(to top, hsl(280, 11%, 95%), hsl(0, 0%, 86%));
   border-radius: 50%;
@@ -39,4 +38,24 @@
 
 .Chip:active .Chip__image {
   box-shadow: none;
+}
+
+.Chip--scissors {
+  background: linear-gradient(to top, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+  box-shadow: 0 6px hsl(29, 78%, 44%), 0 10px 4px hsla(0, 0%, 0%, 0.2);
+}
+
+.Chip--rock {
+  background: linear-gradient(to top, hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+  box-shadow: 0 6px hsl(346, 78%, 35%), 0 10px 4px hsla(0, 0%, 0%, 0.2);
+}
+
+.Chip--lizard {
+  background: linear-gradient(to top, hsl(261, 73%, 60%), hsl(261, 72%, 63%));
+  box-shadow: 0 6px hsl(261, 50%, 44%), 0 10px 4px hsla(0, 0%, 0%, 0.2);
+}
+
+.Chip--spock {
+  background: linear-gradient(to top, hsl(189, 59%, 53%), hsl(189, 58%, 57%));
+  box-shadow: 0 6px hsl(194, 56%, 43%), 0 10px 4px hsla(0, 0%, 0%, 0.2);
 }
