@@ -9,7 +9,9 @@ const Game = () => {
     <section className='Game'>
       <ScoreDisplay score='12' />
       <Chip type='scissors' />
-      <Rules />
+      <a className='Game__link'>
+        Rules
+      </a>
     </section>
   )
 }
