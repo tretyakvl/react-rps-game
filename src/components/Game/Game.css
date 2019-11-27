@@ -1,6 +1,7 @@
 .Game {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
 
   height: 100vh;
@@ -10,6 +11,20 @@
 
   background: radial-gradient(circle at top center, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
   background-size: 100% 100%;
+}
+
+.Game__display {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: space-between;
+
+  width: 310px;
+  height: 280px;
+}
+
+.Game__display :nth-child(3) {
+  margin: 0 auto;
 }
 
 .Game__link {
@@ -29,5 +44,14 @@
 @media (min-width: 500px) {
   .Game {
     padding: 2.9rem 1.95rem;
+  }
+
+  .Game__display {
+    height: 420px;
+    width: 470px;
+  }
+
+  .Game__link {
+    margin-left: auto;
   }
 }

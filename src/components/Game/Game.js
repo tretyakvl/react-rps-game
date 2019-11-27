@@ -8,7 +8,11 @@ const Game = () => {
   return (
     <section className='Game'>
       <ScoreDisplay score='12' />
-      <Chip type='scissors' />
+      <div className='Game__display'>
+        <Chip type='scissors' />
+        <Chip type='scissors' />
+        <Chip type='scissors' />
+      </div>
       <a className='Game__link'>
         Rules
       </a>

@@ -4,7 +4,6 @@
   width: 8.125rem;
   height: 8.125rem;
   padding: 1rem;
-  margin-bottom: 1rem;
 
   background: linear-gradient(to top, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
   border-radius: 50%;
@@ -58,4 +57,17 @@
 .Chip--spock {
   background: linear-gradient(to top, hsl(189, 59%, 53%), hsl(189, 58%, 57%));
   box-shadow: 0 6px hsl(194, 56%, 43%), 0 10px 4px hsla(0, 0%, 0%, 0.2);
+}
+
+@media(min-width: 500px) {
+  .Chip {
+    width: 12.2rem;
+    height: 12.2rem;
+    padding: 1.2rem;
+  }
+
+  .Chip__image img {
+    width: 4rem;
+    height: auto;
+  }
 }
