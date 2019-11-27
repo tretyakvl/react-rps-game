@@ -10,7 +10,6 @@
   box-shadow: 0 6px hsl(230, 64%, 46%), 0 10px 4px hsla(0, 0%, 0%, 0.2);
 
   cursor: pointer;
-  transition: box-shadow 200ms ease-out;
 }
 
 .Chip__image {
@@ -23,7 +22,6 @@
   border-radius: 50%;
   box-shadow: 0 6px hsl(230, 21%, 78%) inset;
 
-  transition: box-shadow 200ms ease-out;
 }
 
 .Chip__image img {
@@ -59,7 +57,7 @@
   box-shadow: 0 6px hsl(194, 56%, 43%), 0 10px 4px hsla(0, 0%, 0%, 0.2);
 }
 
-@media(min-width: 500px) {
+@media (min-width: 500px) {
   .Chip {
     width: 12.2rem;
     height: 12.2rem;
