@@ -40,6 +40,7 @@
   color: var(--lightText);
   font-size: 1rem;
   text-transform: uppercase;
+  text-decoration: none;
   letter-spacing: 0.15em;
   line-height: 2.5;
 

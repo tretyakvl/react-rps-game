@@ -1,10 +1,10 @@
 import React from 'react'
+import { Link } from '@reach/router'
 import ScoreDisplay from '../Score/Score'
 import Chip from '../Chip/Chip'
-import Rules from '../Rules/Rules'
 import './Game.css'
 
-const Game = () => {
+const Game = (props) => {
   return (
     <section className='Game'>
       <ScoreDisplay score='12' />
@@ -13,9 +13,10 @@ const Game = () => {
         <Chip type='scissors' />
         <Chip type='scissors' />
       </div>
-      <a className='Game__link'>
+      <Link to='rules' className='Game__link'>
         Rules
-      </a>
+      </Link>
+      {props.children}
     </section>
   )
 }
