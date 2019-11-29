@@ -1,7 +1,7 @@
-import chipNames from '../constants'
+import CHIP__NAMES from '../constants'
 import { PLAY, PLAY_AGAIN } from './actionTypes'
 
-const { ROCK, PAPER, SCISSORS } = chipNames
+const { ROCK, PAPER, SCISSORS } = CHIP__NAMES
 
 const initialState = {
   score: 0,
@@ -12,7 +12,7 @@ const initialState = {
 export default (store, action) => {
   switch (action.type) {
     case PLAY:
-      return playReducer(store, action.playerChoice)
+      return playReducerHelper(store, action.playerChoice)
     case PLAY_AGAIN:
       return {
         ...store,
@@ -24,7 +24,7 @@ export default (store, action) => {
   }
 }
 
-function playReducer (store, playerChoice) {
+function playReducerHelper (store, playerChoice) {
   const results = [ROCK, PAPER, SCISSORS]
   const houseChoice = results[Math.floor(Math.random() * results.length)]
   const newStore = { ...store, playerChoice, houseChoice }
