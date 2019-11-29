@@ -9,16 +9,10 @@ const initialState = {
   houseChoice: null
 }
 
-const results = [ROCK, PAPER, SCISSORS]
-
 export default (store, action) => {
   switch (action.type) {
     case PLAY:
-      return {
-        ...store,
-        playerChoice: action.payload.playerChoice,
-        houseChoice: results[Math.floor(Math.random() * results.length)]
-      }
+      return playReducer(store, action.playerChoice)
     case PLAY_AGAIN:
       return {
         ...store,
@@ -30,14 +24,18 @@ export default (store, action) => {
   }
 }
 
-function getScore (playerChoice, houseChoice) {
+function playReducer (store, playerChoice) {
+  const results = [ROCK, PAPER, SCISSORS]
+  const houseChoice = results[Math.floor(Math.random() * results.length)]
+  const newStore = { ...store, playerChoice, houseChoice }
+
   if (
     (playerChoice === ROCK && houseChoice === SCISSORS) ||
     (playerChoice === PAPER && houseChoice === ROCK) ||
     (playerChoice === SCISSORS && houseChoice === PAPER)
   ) {
-    return 1
-  } else {
-    return 0
+    newStore.score = ++newStore.score
   }
+
+  return newStore
 }
