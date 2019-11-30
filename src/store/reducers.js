@@ -1,7 +1,8 @@
-import { CHIP_NAMES } from '../constants'
+import { CHIP_NAMES, STATUSES } from '../constants'
 import { PLAY, PLAY_AGAIN } from './actionTypes'
 
 const { ROCK, PAPER, SCISSORS } = CHIP_NAMES
+const { WIN, LOSE, DRAW } = STATUSES
 
 const initialState = {
   score: 0,
@@ -25,16 +26,23 @@ export default (store, action) => {
 }
 
 function playReducerHelper (store, playerChoice) {
+  const winCombinations = [
+    [ROCK, SCISSORS],
+    [PAPER, ROCK],
+    [SCISSORS, ROCK]
+  ]
   const results = [ROCK, PAPER, SCISSORS]
   const houseChoice = results[Math.floor(Math.random() * results.length)]
+  const isWinner = winCombinations.some(([p, h]) => p === playerChoice && h === houseChoice)
   const newStore = { ...store, playerChoice, houseChoice }
 
-  if (
-    (playerChoice === ROCK && houseChoice === SCISSORS) ||
-    (playerChoice === PAPER && houseChoice === ROCK) ||
-    (playerChoice === SCISSORS && houseChoice === PAPER)
-  ) {
+  if (playerChoice === houseChoice) {
+    newStore.result = DRAW
+  } else if (isWinner) {
     newStore.score = ++newStore.score
+    newStore.result = WIN
+  } else {
+    newStore.result = LOSE
   }
 
   return newStore

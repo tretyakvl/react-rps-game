@@ -5,3 +5,9 @@ export const CHIP_NAMES = {
   LIZARD: 'lizard',
   SPOCK: 'spock'
 }
+
+export const STATUSES = {
+  WIN: 'win',
+  LOSE: 'lose',
+  DRAW: 'draw'
+}
