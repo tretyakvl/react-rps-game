@@ -14,7 +14,7 @@ const initialState = {
 export default (store, action) => {
   switch (action.type) {
     case PLAY:
-      return playReducerHelper(store, action.playerChoice)
+      return playReducerHelper(store, action.payload)
     case PLAY_AGAIN:
       return {
         ...initialState,
@@ -25,14 +25,13 @@ export default (store, action) => {
   }
 }
 
-function playReducerHelper (store, playerChoice) {
+function playReducerHelper (store, payload) {
   const winCombinations = [
     [ROCK, SCISSORS],
     [PAPER, ROCK],
     [SCISSORS, ROCK]
   ]
-  const results = [ROCK, PAPER, SCISSORS]
-  const houseChoice = results[Math.floor(Math.random() * results.length)]
+  const { playerChoice, houseChoice } = payload
   const isWinner = winCombinations.some(([p, h]) => p === playerChoice && h === houseChoice)
   const newStore = { ...store, playerChoice, houseChoice }
 
