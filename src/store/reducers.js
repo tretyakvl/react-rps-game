@@ -1,12 +1,13 @@
-import CHIP__NAMES from '../constants'
+import { CHIP_NAMES } from '../constants'
 import { PLAY, PLAY_AGAIN } from './actionTypes'
 
-const { ROCK, PAPER, SCISSORS } = CHIP__NAMES
+const { ROCK, PAPER, SCISSORS } = CHIP_NAMES
 
 const initialState = {
   score: 0,
   playerChoice: null,
-  houseChoice: null
+  houseChoice: null,
+  result: null
 }
 
 export default (store, action) => {
@@ -15,9 +16,8 @@ export default (store, action) => {
       return playReducerHelper(store, action.playerChoice)
     case PLAY_AGAIN:
       return {
-        ...store,
-        playerChoice: null,
-        houseChoice: null
+        ...initialState,
+        score: store.score
       }
     default:
       return store || initialState

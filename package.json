@@ -11,6 +11,9 @@
     "react-scripts": "3.2.0",
     "redux": "^4.0.4"
   },
+  "devDependencies": {
+    "standard": "^14.3.1"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -32,7 +35,7 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "standard": "^14.3.1"
+  "standard": {
+    "envs": ["jest"]
   }
 }

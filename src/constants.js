@@ -1,4 +1,4 @@
-export const CHIP__NAMES = {
+export const CHIP_NAMES = {
   ROCK: 'rock',
   PAPER: 'paper',
   SCISSORS: 'scissors',
