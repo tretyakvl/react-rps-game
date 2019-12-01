@@ -29,7 +29,7 @@ function playReducerHelper (store, payload) {
   const winCombinations = [
     [ROCK, SCISSORS],
     [PAPER, ROCK],
-    [SCISSORS, ROCK]
+    [SCISSORS, PAPER]
   ]
   const { playerChoice, houseChoice } = payload
   const isWinner = winCombinations.some(([p, h]) => p === playerChoice && h === houseChoice)
