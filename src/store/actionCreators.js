@@ -3,7 +3,6 @@ import { CHIP_NAMES } from '../constants'
 
 const { ROCK, PAPER, SCISSORS } = CHIP_NAMES
 const results = [ROCK, PAPER, SCISSORS]
-
 export const play = playerChoice => ({
   type: PLAY,
   payload: {
