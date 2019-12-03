@@ -1,7 +1,11 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
+
 import './Score.css'
 
-const ScoreDisplay = (props) => {
+const ScoreDisplay = () => {
+  const score = useSelector(state => state.score)
+
   return (
     <div className='Score'>
       <h2 className='Score__header'>
@@ -11,7 +15,7 @@ const ScoreDisplay = (props) => {
       </h2>
       <div className='Score__display'>
         <span className='Score__name'>Score</span>
-        <span className='Score__stat'>{props.score}</span>
+        <span className='Score__stat'>{score}</span>
       </div>
     </div>
   )

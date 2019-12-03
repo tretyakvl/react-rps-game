@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { Link } from '@reach/router'
 import { CHIP_NAMES } from '../../constants'
 import { play as playAction, playAgain as playAgainAction } from '../../store'
@@ -10,7 +10,6 @@ import './Game.css'
 const { ROCK, PAPER, SCISSORS } = CHIP_NAMES
 
 const Game = (props) => {
-  const score = useSelector(state => state.score)
   const dispatch = useDispatch()
   const play = useCallback(
     (playerChoice) => dispatch(playAction(playerChoice)),
@@ -23,7 +22,7 @@ const Game = (props) => {
 
   return (
     <section className='Game'>
-      <ScoreDisplay score={score} />
+      <ScoreDisplay />
       <div className='Game__display'>
         <Chip type={ROCK} />
         <Chip type={PAPER} />
