@@ -1,7 +1,8 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 
 import Chip from '../Chip/Chip'
+import { playAgain } from '../../store'
 import { CHIP_NAMES } from '../../constants'
 import './ChipsDisplay.css'
 
@@ -13,6 +14,7 @@ const ChipsDisplay = () => {
   const playerChoice = useSelector(state => state.playerChoice)
   const houseChoice = useSelector(state => state.houseChoice)
   const result = useSelector(state => state.result)
+  const onClick = () => useDispatch()(playAgain())
 
   if (result) {
     return (
@@ -21,7 +23,7 @@ const ChipsDisplay = () => {
         <Chip type={houseChoice} />
         <div className='ChipsDisplay__result'>
           <h3>{result}</h3>
-          <button>Play again</button>
+          <button onClick={onClick}>Play again</button>
         </div>
       </div>
     )
