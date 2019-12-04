@@ -12,6 +12,11 @@
   margin: 0 auto;
 }
 
+.ChipsDisplay--round button {
+  pointer-events: none;
+  touch-action: none;
+}
+
 @media (min-width: 500px) {
   .ChipsDisplay {
     height: 420px;

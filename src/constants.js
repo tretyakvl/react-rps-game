@@ -7,7 +7,7 @@ export const CHIP_NAMES = {
 }
 
 export const STATUSES = {
-  WIN: 'win',
-  LOSE: 'lose',
+  WIN: 'you win',
+  LOSE: 'you lose',
   DRAW: 'draw'
 }
