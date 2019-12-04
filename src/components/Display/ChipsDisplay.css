@@ -1,0 +1,22 @@
+.ChipsDisplay {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: space-between;
+
+  width: 310px;
+  height: 280px;
+}
+
+.ChipsDisplay :nth-child(3) {
+  margin: 0 auto;
+}
+
+@media (min-width: 500px) {
+  .ChipsDisplay {
+    height: 420px;
+    width: 470px;
+
+    margin-top: auto;
+  }
+}

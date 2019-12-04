@@ -6,6 +6,7 @@
   padding: 1rem;
 
   background: linear-gradient(to top, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+  border: none;
   border-radius: 50%;
   box-shadow: 0 6px hsl(230, 64%, 46%), 0 10px 4px hsla(0, 0%, 0%, 0.2);
 

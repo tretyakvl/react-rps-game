@@ -19,20 +19,6 @@
   transition: all 200ms linear;
 }
 
-.Game__display {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: space-between;
-  justify-content: space-between;
-
-  width: 310px;
-  height: 280px;
-}
-
-.Game__display :nth-child(3) {
-  margin: 0 auto;
-}
-
 .Game__link {
   display: inline-block;
   padding: 0 2.25rem;
@@ -52,13 +38,6 @@
   .Game {
     justify-content: start;
     padding: 2.9rem 1.95rem;
-  }
-
-  .Game__display {
-    height: 420px;
-    width: 470px;
-
-    margin-top: auto;
   }
 
   .Game__link {

@@ -13,10 +13,10 @@ import spock from './icon-spock.svg'
 import './Chip.css'
 
 const links = {
-  paper,
-  lizard,
   rock,
+  paper,
   scissors,
+  lizard,
   spock
 }
 
@@ -34,7 +34,7 @@ const Chip = props => {
   )
 }
 
-const possibleNames = [...CHIP_NAMES]
+const possibleNames = Object.keys(CHIP_NAMES).map(key => CHIP_NAMES[key])
 
 Chip.propTypes = {
   type: PropTypes.oneOf(possibleNames).isRequired
