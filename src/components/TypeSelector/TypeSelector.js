@@ -1,21 +1,49 @@
 import React from 'react'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from 'react-router-dom'
 
-import MainButton from '../Buttons/MainButton'
+import ChipsDisplay from '../ChipsDisplay/ChipsDisplay'
+import Btn from '../Btn/Btn'
 import './TypeSelector.css'
 
-const TypeSelector = () => {
+const SelectorDisplay = () => {
   return (
     <section className='TypeSelector'>
       <h2>Select game type</h2>
       <ul>
         <li>
-          <MainButton text='Play again' />
+          <Btn to='/standart'>
+              Standart
+          </Btn>
         </li>
         <li>
-          <MainButton text='Play again' />
+          <Btn to='/lizard-spock'>
+              Lizard spock
+          </Btn>
         </li>
       </ul>
     </section>
+  )
+}
+
+const TypeSelector = () => {
+  return (
+    <Router>
+      <Switch>
+        <Route path='/standart'>
+          <ChipsDisplay />
+        </Route>
+        <Route path='/lizard-spock'>
+          <ChipsDisplay />
+        </Route>
+        <Route path='/'>
+          <SelectorDisplay />
+        </Route>
+      </Switch>
+    </Router>
   )
 }
 
