@@ -1,14 +1,10 @@
 import React from 'react'
-import { Router } from '@reach/router'
 import Game from './components/Game/Game'
-import Rules from './components/Rules/Rules'
 
 const App = () => (
-  <Router>
-    <Game path='/'>
-      <Rules path='rules' />
-    </Game>
-  </Router>
+
+  <Game />
+
 )
 
 export default App

@@ -14,7 +14,8 @@ const ChipsDisplay = () => {
   const playerChoice = useSelector(state => state.playerChoice)
   const houseChoice = useSelector(state => state.houseChoice)
   const result = useSelector(state => state.result)
-  const onClick = () => useDispatch()(playAgain())
+  const dispatch = useDispatch()
+  const onClick = () => dispatch(playAgain())
 
   if (result) {
     return (

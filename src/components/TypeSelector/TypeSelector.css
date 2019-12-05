@@ -1,0 +1,26 @@
+.TypeSelector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.TypeSelector h2 {
+  margin-bottom: 0;
+
+  color: var(--lightBg);
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.TypeSelector ul {
+  margin: auto 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.TypeSelector li + li {
+  margin-top: 1rem;
+}

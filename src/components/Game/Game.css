@@ -1,8 +1,6 @@
 .Game {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
 
   height: 100vh;
   max-width: 1366px;
@@ -15,11 +13,11 @@
   transition: all 200ms linear;
 }
 
-.Game * {
-  transition: all 200ms linear;
+.Game > :nth-child(2) {
+  flex-grow: 1;
 }
 
-.Game__link {
+/* .Game__link {
   display: inline-block;
   padding: 0 2.25rem;
 
@@ -32,15 +30,15 @@
 
   border: 1px solid currentColor;
   border-radius: 9px;
-}
+} */
 
 @media (min-width: 500px) {
   .Game {
     justify-content: start;
     padding: 2.9rem 1.95rem;
   }
-
+/*
   .Game__link {
     margin-left: auto;
-  }
+  } */
 }
