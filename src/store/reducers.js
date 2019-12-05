@@ -1,11 +1,12 @@
 import { CHIP_NAMES, STATUSES } from '../constants'
-import { PLAY, PLAY_AGAIN } from './actionTypes'
+import { PLAY, PLAY_AGAIN, SET_GAME_TYPE } from './actionTypes'
 
 const { ROCK, PAPER, SCISSORS } = CHIP_NAMES
 const { WIN, LOSE, DRAW } = STATUSES
 
 const initialState = {
   score: 0,
+  gameType: null,
   playerChoice: null,
   houseChoice: null,
   result: null
@@ -19,6 +20,11 @@ export default (store, action) => {
       return {
         ...initialState,
         score: store.score
+      }
+    case SET_GAME_TYPE:
+      return {
+        ...initialState,
+        gameType: action.payload.gameType
       }
     default:
       return store || initialState
