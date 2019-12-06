@@ -11,3 +11,8 @@ export const STATUSES = {
   LOSE: 'you lose',
   DRAW: 'draw'
 }
+
+export const GAME_TYPES = {
+  STANDART: 'standart',
+  LIZARD_SPOCK: 'lizard-spock'
+}
