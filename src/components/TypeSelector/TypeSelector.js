@@ -33,15 +33,14 @@ const TypeSelector = () => {
   return (
     <Router>
       <Switch>
-        <Route path='/standart'>
-          <ChipsDisplay />
-        </Route>
-        <Route path='/lizard-spock'>
-          <ChipsDisplay />
-        </Route>
-        <Route path='/'>
-          <SelectorDisplay />
-        </Route>
+        <Route
+          path={['/standart', '/lizard-spock']}
+          component={ChipsDisplay}
+        />
+        <Route
+          path='/'
+          component={SelectorDisplay}
+        />
       </Switch>
     </Router>
   )
