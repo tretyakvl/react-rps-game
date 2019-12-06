@@ -58,7 +58,7 @@ function playReducerHelper (store, payload) {
   }
 
   const { playerChoice } = payload
-  const houseChoice = houseChoices[Math.floor(Math.random() * results.length)]]
+  const houseChoice = houseChoices[Math.floor(Math.random() * houseChoices.length)]
   const isWinner = winCombinations.some(([p, h]) => p === playerChoice && h === houseChoice)
   const newStore = { ...store, playerChoice, houseChoice }
 
