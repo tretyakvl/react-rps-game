@@ -9,7 +9,8 @@ const initialState = {
   score: 0,
   playerChoice: null,
   houseChoice: null,
-  result: null
+  result: null,
+  gameType: null
 }
 
 describe('should handle PLAY', () => {

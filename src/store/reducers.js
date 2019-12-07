@@ -1,9 +1,5 @@
-import { CHIP_NAMES, STATUSES, GAME_TYPES } from '../constants'
 import { PLAY, PLAY_AGAIN, SET_GAME_TYPE } from './actionTypes'
-
-const { ROCK, PAPER, SCISSORS, LIZARD, SPOCK } = CHIP_NAMES
-const { WIN, LOSE, DRAW } = STATUSES
-const { LIZARD_SPOCK } = GAME_TYPES
+import { playReducer, getRandomHouseChoice } from './playReducer'
 
 const initialState = {
   score: 0,
@@ -16,7 +12,11 @@ const initialState = {
 export default (store, action) => {
   switch (action.type) {
     case PLAY:
-      return playReducerHelper(store, action.payload)
+      return playReducer(
+        store,
+        action.payload.playerChoice,
+        getRandomHouseChoice(store.gameType)
+      )
     case PLAY_AGAIN:
       return {
         ...initialState,
@@ -31,45 +31,4 @@ export default (store, action) => {
     default:
       return store || initialState
   }
-}
-
-function playReducerHelper (store, payload) {
-  const { gameType } = store
-  const houseChoices = [ROCK, PAPER, SCISSORS]
-  const winCombinations = [
-    [ROCK, SCISSORS],
-    [PAPER, ROCK],
-    [SCISSORS, PAPER]
-  ]
-
-  if (gameType === LIZARD_SPOCK) {
-    houseChoices.concat([
-      LIZARD, SPOCK
-    ])
-    winCombinations.concat([
-      [ROCK, LIZARD],
-      [LIZARD, SPOCK],
-      [SPOCK, SCISSORS],
-      [SCISSORS, LIZARD],
-      [PAPER, SPOCK],
-      [LIZARD, PAPER],
-      [SPOCK, ROCK]
-    ])
-  }
-
-  const { playerChoice } = payload
-  const houseChoice = houseChoices[Math.floor(Math.random() * houseChoices.length)]
-  const isWinner = winCombinations.some(([p, h]) => p === playerChoice && h === houseChoice)
-  const newStore = { ...store, playerChoice, houseChoice }
-
-  if (playerChoice === houseChoice) {
-    newStore.result = DRAW
-  } else if (isWinner) {
-    newStore.score = ++newStore.score
-    newStore.result = WIN
-  } else {
-    newStore.result = LOSE
-  }
-
-  return newStore
 }
