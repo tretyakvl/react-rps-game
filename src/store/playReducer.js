@@ -6,14 +6,15 @@ const { LIZARD_SPOCK } = GAME_TYPES
 
 export function playReducer (store, playerChoice, houseChoice) {
   const { gameType } = store
-  const winCombinations = [
+  let winCombinations = [
     [ROCK, SCISSORS],
     [PAPER, ROCK],
     [SCISSORS, PAPER]
   ]
 
   if (gameType === LIZARD_SPOCK) {
-    winCombinations.concat([
+    winCombinations = [
+      ...winCombinations,
       [ROCK, LIZARD],
       [LIZARD, SPOCK],
       [SPOCK, SCISSORS],
@@ -21,7 +22,8 @@ export function playReducer (store, playerChoice, houseChoice) {
       [PAPER, SPOCK],
       [LIZARD, PAPER],
       [SPOCK, ROCK]
-    ])
+    ]
+    console.log({ gameType, winCombinations })
   }
 
   const isWinner = winCombinations.some(([p, h]) => p === playerChoice && h === houseChoice)
@@ -33,6 +35,8 @@ export function playReducer (store, playerChoice, houseChoice) {
     newStore.score = ++newStore.score
     newStore.result = WIN
   } else {
+    newStore.score = newStore.score === 0
+      ? 0 : newStore.score - 1
     newStore.result = LOSE
   }
 

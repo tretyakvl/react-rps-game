@@ -17,6 +17,7 @@ it('should handle draw condition', () => {
   const houseChoice = ROCK
   const expectedState = {
     score: 99,
+    gameType: STANDART,
     playerChoice,
     houseChoice,
     result: DRAW
@@ -26,39 +27,43 @@ it('should handle draw condition', () => {
     .toEqual(expectedState)
 })
 
-describe.eacth([
+describe.each([
   [
     STANDART,
-    [ROCK, SCISSORS],
-    [PAPER, ROCK],
-    [SCISSORS, PAPER]
+    [
+      [ROCK, SCISSORS],
+      [PAPER, ROCK],
+      [SCISSORS, PAPER]
+    ]
   ],
   [
     LIZARD_SPOCK,
-    [ROCK, SCISSORS],
-    [PAPER, ROCK],
-    [SCISSORS, PAPER],
-    [ROCK, LIZARD],
-    [LIZARD, SPOCK],
-    [SPOCK, SCISSORS],
-    [SCISSORS, LIZARD],
-    [PAPER, SPOCK],
-    [LIZARD, PAPER],
-    [SPOCK, ROCK]
+    [
+      [ROCK, SCISSORS],
+      [PAPER, ROCK],
+      [SCISSORS, PAPER],
+      [ROCK, LIZARD],
+      [LIZARD, SPOCK],
+      [SPOCK, SCISSORS],
+      [SCISSORS, LIZARD],
+      [PAPER, SPOCK],
+      [LIZARD, PAPER],
+      [SPOCK, ROCK]
+    ]
   ]
-])('should handle %s mode:', (mode, winCombinations) => {
+])('should handle %s mode:', (gameType, winCombinations) => {
   it.each(winCombinations)(' player`s %s beats house`s %s',
     (playerChoice, houseChoice) => {
       const state = {
         score: 22,
-        gameType: STANDART,
+        gameType,
         playerChoice: SCISSORS,
         houseChoice: ROCK,
         result: LOSE
       }
       const expectedState = {
         score: state.score + 1,
-        gameType: STANDART,
+        gameType,
         playerChoice,
         houseChoice,
         result: WIN
@@ -73,14 +78,14 @@ describe.eacth([
     (houseChoice, playerChoice) => {
       const state = {
         score: 51,
-        gameType: STANDART,
+        gameType,
         playerChoice: PAPER,
         houseChoice: ROCK,
         result: WIN
       }
       const expectedState = {
         score: state.score - 1,
-        gameType: STANDART,
+        gameType,
         playerChoice,
         houseChoice,
         result: LOSE
