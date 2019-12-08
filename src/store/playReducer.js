@@ -23,7 +23,6 @@ export function playReducer (store, playerChoice, houseChoice) {
       [LIZARD, PAPER],
       [SPOCK, ROCK]
     ]
-    console.log({ gameType, winCombinations })
   }
 
   const isWinner = winCombinations.some(([p, h]) => p === playerChoice && h === houseChoice)
