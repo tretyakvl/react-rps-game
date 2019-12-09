@@ -22,30 +22,29 @@ const ChipsDisplay = ({ match }) => {
     [GAME_TYPES.LIZARD_SPOCK]: pentagon
   }
 
+  let classes = `ChipsDisplay ChipsDisplay--${gameType}`
+  let chips = [ROCK, PAPER, SCISSORS]
+
+  if (gameType === GAME_TYPES.LIZARD_SPOCK) {
+    chips = [...chips, LIZARD, SPOCK]
+  }
+
+  if (houseChoice) {
+    classes = classes + ' ChipsDisplay--results'
+    chips = [houseChoice, playerChoice]
+  }
+
+  chips = chips.map((type, i) => <Chip type={type} key={type + i} />)
+
   useEffect(() => {
     dispatch(setGameType(gameType))
   }, [gameType])
 
-  let chips = [ROCK, PAPER, SCISSORS]
-  if (gameType === GAME_TYPES.LIZARD_SPOCK) {
-    chips = [...chips, LIZARD, SPOCK]
-  }
-  chips = chips.map(type => <Chip type={type} key={type} />)
-
-  if (houseChoice) {
-    return (
-      <div className='ChipsDisplay ChipsDisplay--round'>
-        <Chip type={playerChoice} />
-        <Chip type={houseChoice} />
-        <ResultScreen />
-      </div>
-    )
-  }
-
   return (
-    <div className={`ChipsDisplay ChipsDisplay--${gameType}`}>
+    <div className={classes}>
       <img src={imgSelector[gameType]} />
       {chips}
+      <ResultScreen />
     </div>
   )
 }

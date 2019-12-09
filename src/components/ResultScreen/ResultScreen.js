@@ -9,6 +9,8 @@ const ResultScreen = () => {
   const dispatch = useDispatch()
   const onClick = () => dispatch(playAgain())
 
+  if (!result) return null
+
   return (
     <div className='ResultScreen'>
       <h3>{result}</h3>
