@@ -5,6 +5,10 @@ import Chip from '../Chip/Chip'
 import ResultScreen from '../ResultScreen/ResultScreen'
 import { setGameType } from '../../store'
 import { CHIP_NAMES } from '../../constants'
+
+import triangle from './bg-triangle.svg'
+import pentagon from './bg-pentagon.svg'
+
 import './ChipsDisplay.css'
 
 const { ROCK, PAPER, SCISSORS } = CHIP_NAMES
@@ -32,7 +36,8 @@ const ChipsDisplay = ({ match }) => {
   }
 
   return (
-    <div className='ChipsDisplay'>
+    <div className={`ChipsDisplay ChipsDisplay--${gameType}`}>
+      <img src={triangle} />
       {chips}
     </div>
   )

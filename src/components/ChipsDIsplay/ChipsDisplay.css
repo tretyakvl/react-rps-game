@@ -1,27 +1,52 @@
 .ChipsDisplay {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: space-between;
-  justify-content: space-between;
+  position: relative;
 
-  width: 310px;
-  height: 280px;
+  margin-top: 100px;
 }
 
-.ChipsDisplay :nth-child(3) {
-  margin: 0 auto;
+.ChipsDisplay > img {
+  display: block;
+
+  width: 55vw;
+  min-width: 12.5rem;
+  max-width: 18.75rem;
+  height: auto;
 }
 
-.ChipsDisplay--round button {
-  pointer-events: none;
-  touch-action: none;
+.ChipsDisplay--standart > button {
+  position: absolute;
 }
 
-@media (min-width: 500px) {
-  .ChipsDisplay {
-    height: 420px;
-    width: 470px;
+.ChipsDisplay--standart > button:nth-of-type(1) {
+  top: 0;
+  left: 0;
+  transform: translate(-40%, -45%);
+}
 
-    margin-top: auto;
+.ChipsDisplay--standart > button:nth-of-type(2) {
+  top: 0;
+  right: 0;
+  transform: translate(40%, -45%);
+}
+
+.ChipsDisplay--standart > button:nth-of-type(3) {
+  bottom: 0;
+  right: 50%;
+  transform: translate(50%, 25%);
+}
+
+@media(min-width: 31.25rem) {
+  .ChipsDisplay--standart > button:nth-of-type(1) {
+    transform: translate(-45%, -45%);
+  }
+
+  .ChipsDisplay--standart > button:nth-of-type(2) {
+
+    transform: translate(45%, -45%);
+  }
+
+  .ChipsDisplay--standart > button:nth-of-type(3) {
+
+    transform: translate(50%, 30%);
   }
 }

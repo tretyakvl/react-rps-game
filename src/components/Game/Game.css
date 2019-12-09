@@ -1,9 +1,10 @@
 .Game {
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   height: 100vh;
-  max-width: 1366px;
+  max-width: 85.375rem;
   margin: 0 auto;
   padding: 1.95rem;
 
@@ -11,10 +12,6 @@
   background-size: 100% 100%;
 
   transition: all 200ms linear;
-}
-
-.Game > :nth-child(2) {
-  flex-grow: 1;
 }
 
 /* .Game__link {
