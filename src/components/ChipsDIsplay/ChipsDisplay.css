@@ -13,7 +13,7 @@
   height: auto;
 }
 
-.ChipsDisplay--standart > button {
+.ChipsDisplay > button {
   position: absolute;
 }
 
@@ -35,18 +35,56 @@
   transform: translate(50%, 25%);
 }
 
+.ChipsDisplay--lizard-spock > img {
+  max-width: 20rem;
+}
+
+.ChipsDisplay--lizard-spock > button:nth-of-type(1) {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -55%) scale(0.75);
+}
+
+.ChipsDisplay--lizard-spock > button:nth-of-type(1) {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -55%) scale(0.75);
+}
+
+.ChipsDisplay--lizard-spock > button:nth-of-type(2) {
+  top: 0;
+  right: 0;
+  transform: translate(53%, 10%) scale(0.75);
+}
+
+.ChipsDisplay--lizard-spock > button:nth-of-type(3) {
+  bottom: 0;
+  right: 0;
+  transform: translate(20%, 53%) scale(0.75);
+}
+
+.ChipsDisplay--lizard-spock > button:nth-of-type(4) {
+  bottom: 0;
+  left: 0;
+  transform: translate(-20%, 53%) scale(0.75);
+}
+
+.ChipsDisplay--lizard-spock > button:nth-of-type(5) {
+  top: 0;
+  left: 0;
+  transform: translate(-53%, 10%) scale(0.75);
+}
+
 @media(min-width: 31.25rem) {
   .ChipsDisplay--standart > button:nth-of-type(1) {
     transform: translate(-45%, -45%);
   }
 
   .ChipsDisplay--standart > button:nth-of-type(2) {
-
     transform: translate(45%, -45%);
   }
 
   .ChipsDisplay--standart > button:nth-of-type(3) {
-
     transform: translate(50%, 30%);
   }
 }

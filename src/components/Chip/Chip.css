@@ -58,7 +58,7 @@
   box-shadow: 0 6px hsl(194, 56%, 43%), 0 10px 4px hsla(0, 0%, 0%, 0.2);
 }
 
-@media (min-width: 500px) {
+@media (min-width: 31.25rem) {
   .Chip {
     width: 12.2rem;
     height: 12.2rem;

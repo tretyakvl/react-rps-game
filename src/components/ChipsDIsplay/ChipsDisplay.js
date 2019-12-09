@@ -4,26 +4,33 @@ import { useSelector, useDispatch } from 'react-redux'
 import Chip from '../Chip/Chip'
 import ResultScreen from '../ResultScreen/ResultScreen'
 import { setGameType } from '../../store'
-import { CHIP_NAMES } from '../../constants'
+import { CHIP_NAMES, GAME_TYPES } from '../../constants'
 
 import triangle from './bg-triangle.svg'
 import pentagon from './bg-pentagon.svg'
-
 import './ChipsDisplay.css'
 
-const { ROCK, PAPER, SCISSORS } = CHIP_NAMES
-const chips = [ROCK, PAPER, SCISSORS]
-  .map(type => <Chip type={type} key={type} />)
+const { ROCK, PAPER, SCISSORS, LIZARD, SPOCK } = CHIP_NAMES
 
 const ChipsDisplay = ({ match }) => {
   const dispatch = useDispatch()
   const playerChoice = useSelector(state => state.playerChoice)
   const houseChoice = useSelector(state => state.houseChoice)
   const gameType = match.path.slice(1)
+  const imgSelector = {
+    [GAME_TYPES.STANDART]: triangle,
+    [GAME_TYPES.LIZARD_SPOCK]: pentagon
+  }
 
   useEffect(() => {
     dispatch(setGameType(gameType))
   }, [gameType])
+
+  let chips = [ROCK, PAPER, SCISSORS]
+  if (gameType === GAME_TYPES.LIZARD_SPOCK) {
+    chips = [...chips, LIZARD, SPOCK]
+  }
+  chips = chips.map(type => <Chip type={type} key={type} />)
 
   if (houseChoice) {
     return (
@@ -37,7 +44,7 @@ const ChipsDisplay = ({ match }) => {
 
   return (
     <div className={`ChipsDisplay ChipsDisplay--${gameType}`}>
-      <img src={triangle} />
+      <img src={imgSelector[gameType]} />
       {chips}
     </div>
   )

@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* justify-content: space-around; */
 
   height: 100vh;
   max-width: 85.375rem;
@@ -31,11 +32,6 @@
 
 @media (min-width: 500px) {
   .Game {
-    justify-content: start;
     padding: 2.9rem 1.95rem;
   }
-/*
-  .Game__link {
-    margin-left: auto;
-  } */
 }
