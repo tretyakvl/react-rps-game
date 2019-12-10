@@ -4,7 +4,7 @@
   margin-top: 100px;
 }
 
-.ChipsDisplay > img {
+.ChipsDisplay__bg {
   display: block;
 
   width: 55vw;
@@ -13,78 +13,131 @@
   height: auto;
 }
 
-.ChipsDisplay > button {
+.ChipsDisplay__chip {
   position: absolute;
+  border-radius: 50%;
 }
 
-.ChipsDisplay--standart > button:nth-of-type(1) {
+.ChipsDisplay--standart .ChipsDisplay__chip:nth-of-type(1) {
   top: 0;
   left: 0;
   transform: translate(-40%, -45%);
 }
 
-.ChipsDisplay--standart > button:nth-of-type(2) {
+.ChipsDisplay--standart .ChipsDisplay__chip:nth-of-type(2) {
   top: 0;
   right: 0;
   transform: translate(40%, -45%);
 }
 
-.ChipsDisplay--standart > button:nth-of-type(3) {
+.ChipsDisplay--standart .ChipsDisplay__chip:nth-of-type(3) {
   bottom: 0;
   right: 50%;
   transform: translate(50%, 25%);
 }
 
-.ChipsDisplay--lizard-spock > img {
+.ChipsDisplay--lizard-spock .ChipsDisplay__bg {
   max-width: 20rem;
 }
 
-.ChipsDisplay--lizard-spock > button:nth-of-type(1) {
+.ChipsDisplay--lizard-spock .ChipsDisplay__chip:nth-of-type(1) {
   top: 0;
   left: 50%;
   transform: translate(-50%, -55%) scale(0.75);
 }
 
-.ChipsDisplay--lizard-spock > button:nth-of-type(1) {
+.ChipsDisplay--lizard-spock .ChipsDisplay__chip:nth-of-type(1) {
   top: 0;
   left: 50%;
   transform: translate(-50%, -55%) scale(0.75);
 }
 
-.ChipsDisplay--lizard-spock > button:nth-of-type(2) {
+.ChipsDisplay--lizard-spock .ChipsDisplay__chip:nth-of-type(2) {
   top: 0;
   right: 0;
   transform: translate(53%, 10%) scale(0.75);
 }
 
-.ChipsDisplay--lizard-spock > button:nth-of-type(3) {
+.ChipsDisplay--lizard-spock .ChipsDisplay__chip:nth-of-type(3) {
   bottom: 0;
   right: 0;
   transform: translate(20%, 53%) scale(0.75);
 }
 
-.ChipsDisplay--lizard-spock > button:nth-of-type(4) {
+.ChipsDisplay--lizard-spock .ChipsDisplay__chip:nth-of-type(4) {
   bottom: 0;
   left: 0;
   transform: translate(-20%, 53%) scale(0.75);
 }
 
-.ChipsDisplay--lizard-spock > button:nth-of-type(5) {
+.ChipsDisplay--lizard-spock .ChipsDisplay__chip:nth-of-type(5) {
   top: 0;
   left: 0;
   transform: translate(-53%, 10%) scale(0.75);
 }
 
+.ChipsDisplay--results .ChipsDisplay__bg {
+  opacity: 0
+}
+
+.ChipsDisplay--results .ChipsDisplay__chip {
+  pointer-events: none;
+  touch-action: none;
+}
+
+.ChipsDisplay--results .ChipsDisplay__chip::after {
+  content: 'YOU PICKED';
+
+  position: absolute;
+  bottom: -2.75rem;
+  left: 1.05rem;
+
+  color: var(--lightText);
+  font-family: 'Barlow Semi Condensed', Arial, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.ChipsDisplay--results .ChipsDisplay__chip:nth-of-type(2):before {
+  content: '';
+
+  position: absolute;
+  z-index: -1;
+
+  display: block;
+  top: 0.5rem;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  left: 0.5rem;
+
+  background-color: hsl(220, 47%, 18%);
+  border-radius: 50%;
+}
+
+.ChipsDisplay--results .ChipsDisplay__chip:nth-of-type(2) button {
+  opacity: 0;
+}
+
+.ChipsDisplay--results .ChipsDisplay__chip:nth-of-type(2)::after {
+  content: 'THE HOUSE PICKED';
+
+  left: -0.2rem;
+
+  white-space: nowrap;
+}
+
 @media(min-width: 31.25rem) {
-  .ChipsDisplay--standart > button:nth-of-type(1) {
+  .ChipsDisplay--standart .ChipsDisplay__chip:nth-of-type(1) {
     transform: translate(-45%, -45%);
   }
 
-  .ChipsDisplay--standart > button:nth-of-type(2) {
+  .ChipsDisplay--standart .ChipsDisplay__chip:nth-of-type(2) {
     transform: translate(45%, -45%);
   }
 
-  .ChipsDisplay--standart > button:nth-of-type(3) {
+  .ChipsDisplay--standart .ChipsDisplay__chip:nth-of-type(3) {
     transform: translate(50%, 30%);
   }
 }

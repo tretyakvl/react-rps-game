@@ -31,10 +31,14 @@ const ChipsDisplay = ({ match }) => {
 
   if (houseChoice) {
     classes = classes + ' ChipsDisplay--results'
-    chips = [houseChoice, playerChoice]
+    chips = [playerChoice, houseChoice]
   }
 
-  chips = chips.map((type, i) => <Chip type={type} key={type + i} />)
+  chips = chips.map((type, i) => (
+    <div className='ChipsDisplay__chip' key={type + i}>
+      <Chip type={type} />
+    </div>
+  ))
 
   useEffect(() => {
     dispatch(setGameType(gameType))
@@ -42,7 +46,7 @@ const ChipsDisplay = ({ match }) => {
 
   return (
     <div className={classes}>
-      <img src={imgSelector[gameType]} />
+      <img className='ChipsDisplay__bg' src={imgSelector[gameType]} />
       {chips}
       <ResultScreen />
     </div>
