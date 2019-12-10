@@ -141,3 +141,28 @@
     transform: translate(50%, 30%);
   }
 }
+
+@media(min-width: 43.75rem) {
+  .ChipsDisplay--results .ChipsDisplay__chip {
+    scale: 1.5;
+  }
+
+  .ChipsDisplay--results .ChipsDisplay__chip::after {
+    top: -3.75rem;
+    bottom: auto;
+    left: 3rem;
+
+    letter-spacing: 0.16em;
+  }
+
+  .ChipsDisplay--results .ChipsDisplay__chip:nth-of-type(2)::after {
+    left: 1rem;
+  }
+
+  .ChipsDisplay--results .ChipsDisplay__chip:nth-of-type(2):before {
+    top: 1.3rem;
+    right: 1.3rem;
+    bottom: 1.3rem;
+    left: 1.3rem;
+  }
+}
