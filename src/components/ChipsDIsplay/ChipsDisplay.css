@@ -11,6 +11,9 @@
   min-width: 12.5rem;
   max-width: 18.75rem;
   height: auto;
+
+  opacity: 1;
+  transition: opacity 200ms linear;
 }
 
 .ChipsDisplay__chip {
@@ -126,6 +129,12 @@
   left: -0.2rem;
 
   white-space: nowrap;
+}
+
+.ChipsDisplay--results .ChipsDisplay--lizard-spock .ChipsDisplay__chip:nth-of-type(1) {
+  top: 0;
+  left: 0;
+  transform: translate(-40%, -45%);
 }
 
 @media(min-width: 31.25rem) {
