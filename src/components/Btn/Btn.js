@@ -4,8 +4,22 @@ import { Link } from 'react-router-dom'
 import './Btn.css'
 
 const Btn = (props) => {
+  const { type, ...rest } = props
+
+  if (type === 'link') {
+    return (
+      <Link className='Btn' {...rest}>{props.children}</Link>
+    )
+  }
+
+  if (type === 'button') {
+    return (
+      <button className='Btn' {...rest}>{props.children}</button>
+    )
+  }
+
   return (
-    <Link className='Btn' {...props}>{props.children}</Link>
+    <button className='Btn' {...rest}>{props.children}</button>
   )
 }
 
