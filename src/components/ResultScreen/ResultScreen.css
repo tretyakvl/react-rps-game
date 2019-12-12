@@ -1,3 +1,35 @@
 .ResultScreen {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  width: 100%;
+}
+
+.ResultScreen > * {
+  flex: 0 0 auto;
+}
+
+.ResultScreen__result {
+  order: 2;
+
+  width: 250px;
+  margin: 0 auto;
+  background-color: red;
+}
+
+@media(min-width: 700px) {
+  .ResultScreen {
+    flex-wrap: nowrap;
+
+    width: auto;
+  }
+
+  .ResultScreen__chip:nth-child(2) {
+    order: 3;
+  }
+
+  .ResultScreen__result {
+    order: 2;
+  }
 }

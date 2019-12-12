@@ -14,8 +14,12 @@ const ResultScreen = () => {
 
   return (
     <section className='ResultScreen'>
-      <Chip type={playerChoice} />
-      <Chip type={houseChoice} />
+      <div className="ResultScreen__chip">
+        <Chip type={playerChoice} />
+      </div>
+      <div className="ResultScreen__chip">
+        <Chip type={houseChoice} />
+      </div>
       <div className='ResultScreen__result'>
         <h2>{result}</h2>
         <button onClick={onClick}>Play again</button>
