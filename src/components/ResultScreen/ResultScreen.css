@@ -10,6 +10,22 @@
   flex: 0 0 auto;
 }
 
+.ResultScreen__chip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ResultScreen__label {
+  margin-top: 1.7rem;
+
+  color: var(--lightText);
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
 .ResultScreen__result {
   order: 2;
 
@@ -25,8 +41,26 @@
     width: auto;
   }
 
+  .ResultScreen__chip {
+    flex-direction: column-reverse;
+
+    width: 18.75rem;
+  }
+
+  .ResultScreen__chip > :first-child {
+    scale: 1.5;
+  }
+
   .ResultScreen__chip:nth-child(2) {
     order: 3;
+  }
+
+  .ResultScreen__label {
+    margin-top: 0;
+    margin-bottom: 7rem;
+
+    font-size: 1.5rem;
+    letter-spacing: 0.12em;
   }
 
   .ResultScreen__result {

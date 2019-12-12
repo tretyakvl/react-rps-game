@@ -14,11 +14,13 @@ const ResultScreen = () => {
 
   return (
     <section className='ResultScreen'>
-      <div className="ResultScreen__chip">
+      <div className='ResultScreen__chip'>
         <Chip type={playerChoice} />
+        <span className='ResultScreen__label'>You picked</span>
       </div>
-      <div className="ResultScreen__chip">
+      <div className='ResultScreen__chip'>
         <Chip type={houseChoice} />
+        <span className='ResultScreen__label'>The house picked</span>
       </div>
       <div className='ResultScreen__result'>
         <h2>{result}</h2>
