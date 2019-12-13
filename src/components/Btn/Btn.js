@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom'
 import './Btn.css'
 
 const Btn = (props) => {
-  const { type, ...rest } = props
+  const { type, to, ...rest } = props
 
-  if (type === 'link') {
+  if (to) {
     return (
-      <Link className='Btn' {...rest}>{props.children}</Link>
+      <Link className='Btn' to={to} {...rest}>{props.children}</Link>
     )
   }
 

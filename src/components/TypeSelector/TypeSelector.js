@@ -5,9 +5,10 @@ import {
   Route
 } from 'react-router-dom'
 
-import { GAME_TYPES } from '../../constants'
-import ChipsDisplay from '../ChipsDisplay/ChipsDisplay'
 import Btn from '../Btn/Btn'
+import ScreenSelector from '../ScreenSelector/ScreenSelector'
+
+import { GAME_TYPES } from '../../constants'
 import './TypeSelector.css'
 
 const { STANDART, LIZARD_SPOCK } = GAME_TYPES
@@ -38,7 +39,7 @@ const TypeSelector = () => {
       <Switch>
         <Route
           path={[`/${STANDART}`, `/${LIZARD_SPOCK}`]}
-          component={ChipsDisplay}
+          component={ScreenSelector}
         />
         <Route
           path='/'
