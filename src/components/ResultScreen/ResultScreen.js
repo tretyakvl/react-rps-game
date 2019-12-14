@@ -20,8 +20,8 @@ const ResultScreen = () => {
         <span className='ResultScreen__label'>You picked</span>
       </div>
       <div className='ResultScreen__result'>
-        <h2>You lose</h2>
-        <Btn>Play again</Btn>
+        <h2>{result}</h2>
+        <Btn onClick={onClick}>Play again</Btn>
       </div>
       <div className='ResultScreen__chip'>
         <Chip type={houseChoice} />
