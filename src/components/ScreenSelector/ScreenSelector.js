@@ -11,7 +11,6 @@ const ScreenSelector = ({ match }) => {
   const gameType = match.path.slice(1)
   const dispatch = useDispatch()
 
-  console.log('tick')
   useEffect(() => {
     dispatch(setGameType(gameType))
   }, [gameType])
