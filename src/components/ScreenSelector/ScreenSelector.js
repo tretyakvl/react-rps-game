@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { AnimatePresence, motion } from 'framer-motion'
+import { AnimatePresence } from 'framer-motion'
 
 import ChipsDisplay from '../ChipsDisplay/ChipsDisplay'
 import ResultScreen from '../ResultScreen/ResultScreen'

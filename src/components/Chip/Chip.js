@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch } from 'react-redux'
+import { motion } from 'framer-motion'
 
 import { play } from '../../store'
 import { CHIP_NAMES } from '../../constants'
@@ -26,11 +27,16 @@ const Chip = props => {
   const onClick = () => dispatch(play(type))
 
   return (
-    <button className={`Chip Chip--${type}`} onClick={onClick}>
+    <motion.button
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className={`Chip Chip--${type}`} onClick={onClick}
+    >
       <div className='Chip__image'>
         <img src={links[type]} alt='Paper' width='49' height='59' />
       </div>
-    </button>
+    </motion.button>
   )
 }
 

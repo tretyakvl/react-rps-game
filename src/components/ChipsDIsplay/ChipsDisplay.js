@@ -1,6 +1,5 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import { motion } from 'framer-motion'
 
 import Chip from '../Chip/Chip'
 import { CHIP_NAMES, GAME_TYPES } from '../../constants'
@@ -25,17 +24,14 @@ const ChipsDisplay = ({ match }) => {
   }
 
   return (
-    <motion.div
+    <div
       className={`ChipsDisplay ChipsDisplay--${gameType}`}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
     >
       <img src={imgSelector[gameType]} />
       {chips.map(type => (
         <Chip type={type} key={type} />
       ))}
-    </motion.div>
+    </div>
   )
 }
 

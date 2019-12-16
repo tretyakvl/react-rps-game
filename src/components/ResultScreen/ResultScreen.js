@@ -1,6 +1,5 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { motion } from 'framer-motion'
 
 import Chip from '../Chip/Chip'
 import Btn from '../Btn/Btn'
@@ -15,11 +14,8 @@ const ResultScreen = () => {
   const onClick = () => dispatch(playAgain())
 
   return (
-    <motion.section
+    <section
       className='ResultScreen'
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
     >
       <div className='ResultScreen__chip'>
         <Chip type={playerChoice} />
@@ -33,7 +29,7 @@ const ResultScreen = () => {
         <Chip type={houseChoice} />
         <span className='ResultScreen__label'>The house picked</span>
       </div>
-    </motion.section>
+    </section>
   )
 }
 
