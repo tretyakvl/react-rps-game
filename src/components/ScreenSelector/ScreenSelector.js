@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
+import { AnimatePresence, motion } from 'framer-motion'
 
 import ChipsDisplay from '../ChipsDisplay/ChipsDisplay'
 import ResultScreen from '../ResultScreen/ResultScreen'
@@ -15,8 +16,15 @@ const ScreenSelector = ({ match }) => {
     dispatch(setGameType(gameType))
   }, [gameType])
 
-  if (result) return <ResultScreen />
-  return <ChipsDisplay />
+  return (
+    <AnimatePresence exitBeforeEnter>
+      {
+        result
+          ? <ResultScreen key='ResultScreen' />
+          : <ChipsDisplay key='ChipsDisplay' />
+      }
+    </AnimatePresence>
+  )
 }
 
 export default ScreenSelector
