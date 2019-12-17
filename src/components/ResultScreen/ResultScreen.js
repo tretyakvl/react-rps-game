@@ -26,7 +26,14 @@ const ResultScreen = () => {
         <Btn onClick={onClick}>Play again</Btn>
       </div>
       <div className='ResultScreen__chip'>
-        <Chip type={houseChoice} />
+        <div className='ResultScreen__backdrop'>
+          <Chip
+            type={houseChoice}
+            transition={{
+              delay: 1
+            }}
+          />
+        </div>
         <span className='ResultScreen__label'>The house picked</span>
       </div>
     </section>

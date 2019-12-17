@@ -23,6 +23,11 @@
   align-self: flex-end;
 }
 
+.ResultScreen__backdrop {
+  border-radius: 50%;
+  background-color: hsl(220, 47%, 18%);
+}
+
 .ResultScreen__label {
   margin-top: 1.7rem;
 

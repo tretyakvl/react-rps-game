@@ -22,7 +22,7 @@ const links = {
 }
 
 const Chip = props => {
-  const { type } = props
+  const { type, ...rest } = props
   const dispatch = useDispatch()
   const onClick = () => dispatch(play(type))
 
@@ -32,6 +32,7 @@ const Chip = props => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       className={`Chip Chip--${type}`} onClick={onClick}
+      {...rest}
     >
       <div className='Chip__image'>
         <img src={links[type]} alt='Paper' width='49' height='59' />
