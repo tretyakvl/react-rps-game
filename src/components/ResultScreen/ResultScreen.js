@@ -1,10 +1,22 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
+import { motion } from 'framer-motion'
 
 import Chip from '../Chip/Chip'
 import Btn from '../Btn/Btn'
 import { playAgain } from '../../store'
+import { STATUSES } from '../../constants'
 import './ResultScreen.css'
+
+const winAnimation = {
+  animate: {
+    boxShadow: `
+    0px 0px 0px 1.25em hsla(0, 100%, 100%, 0.03),
+    0px 0px 0px 2.8125em hsla(0, 100%, 100%, 0.03),
+    0px 0px 0px 4.375em hsla(0, 100%, 100%, 0.03)
+    `
+  }
+}
 
 const ResultScreen = () => {
   const result = useSelector(state => state.result)
@@ -18,7 +30,15 @@ const ResultScreen = () => {
       className='ResultScreen'
     >
       <div className='ResultScreen__chip'>
-        <Chip type={playerChoice} />
+        <motion.div
+          className='ResultScreen__backdrop'
+          exit={{ opacity: 0 }}
+          {...(result === STATUSES.WIN ? winAnimation : {})}
+        >
+          <Chip
+            type={playerChoice}
+          />
+        </motion.div>
         <span className='ResultScreen__label'>You picked</span>
       </div>
       <div className='ResultScreen__result'>
@@ -26,14 +46,18 @@ const ResultScreen = () => {
         <Btn onClick={onClick}>Play again</Btn>
       </div>
       <div className='ResultScreen__chip'>
-        <div className='ResultScreen__backdrop'>
+        <motion.div
+          className='ResultScreen__backdrop'
+          exit={{ opacity: 0 }}
+          {...(result === STATUSES.LOSE ? winAnimation : {})}
+        >
           <Chip
             type={houseChoice}
             transition={{
               delay: 1
             }}
           />
-        </div>
+        </motion.div>
         <span className='ResultScreen__label'>The house picked</span>
       </div>
     </section>

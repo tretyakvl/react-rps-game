@@ -78,6 +78,10 @@
     scale: 1.5;
   }
 
+  .ResultScreen__backdrop {
+    font-size: 3rem;
+  }
+
   .ResultScreen__label {
     margin-top: 0;
     margin-bottom: 7rem;
