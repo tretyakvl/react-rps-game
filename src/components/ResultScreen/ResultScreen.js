@@ -41,10 +41,23 @@ const ResultScreen = () => {
         </motion.div>
         <span className='ResultScreen__label'>You picked</span>
       </div>
-      <div className='ResultScreen__result'>
+      <motion.div
+        className='ResultScreen__result'
+        initial={{
+          marginLeft: '0rem',
+          marginRight: '0rem',
+          opacity: 0
+        }}
+        animate={{
+          marginLeft: '3.5rem',
+          marginRight: '3.5rem',
+          opacity: 1
+        }}
+        exit={{ opacity: 0 }}
+      >
         <h2>{result}</h2>
         <Btn onClick={onClick}>Play again</Btn>
-      </div>
+      </motion.div>
       <div className='ResultScreen__chip'>
         <motion.div
           className='ResultScreen__backdrop'
