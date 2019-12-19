@@ -15,6 +15,9 @@ const winAnimation = {
     0px 0px 0px 2.8125em hsla(0, 100%, 100%, 0.03),
     0px 0px 0px 4.375em hsla(0, 100%, 100%, 0.03)
     `
+  },
+  transition: {
+    delay: 1
   }
 }
 
@@ -44,16 +47,17 @@ const ResultScreen = () => {
       <motion.div
         className='ResultScreen__result'
         initial={{
-          marginLeft: '0rem',
-          marginRight: '0rem',
           opacity: 0
         }}
         animate={{
-          marginLeft: '3.5rem',
-          marginRight: '3.5rem',
-          opacity: 1
+          marginLeft: ['0rem', '3.5rem', '3.5rem', '3.5rem'],
+          marginRight: ['0rem', '3.5rem', '3.5rem', '3.5rem'],
+          opacity: [0, 0, 0, 1]
         }}
         exit={{ opacity: 0 }}
+        transition={{
+          delay: 1.5
+        }}
       >
         <h2>{result}</h2>
         <Btn onClick={onClick}>Play again</Btn>
