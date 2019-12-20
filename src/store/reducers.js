@@ -21,7 +21,9 @@ export default (store, action) => {
       return {
         ...initialState,
         score: store.score,
-        gameType: store.gameType
+        gameType: store.gameType,
+        playerChoice: store.playerChoice,
+        houseChoice: store.houseChoice
       }
     case SET_GAME_TYPE:
       return {

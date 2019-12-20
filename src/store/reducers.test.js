@@ -29,8 +29,8 @@ it('should handle PLAY_AGAIN', () => {
   }
   const expectedState = {
     score: 2,
-    playerChoice: null,
-    houseChoice: null,
+    playerChoice: SCISSORS,
+    houseChoice: SCISSORS,
     result: null
   }
 
