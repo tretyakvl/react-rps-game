@@ -4,6 +4,7 @@ import { AnimatePresence } from 'framer-motion'
 
 import ChipsDisplay from '../ChipsDisplay/ChipsDisplay'
 import ResultScreen from '../ResultScreen/ResultScreen'
+import Btn from '../Btn/Btn'
 
 import { setGameType } from '../../store'
 
@@ -17,13 +18,18 @@ const ScreenSelector = ({ match }) => {
   }, [gameType])
 
   return (
-    <AnimatePresence exitBeforeEnter>
-      {
-        result
-          ? <ResultScreen key='ResultScreen' />
-          : <ChipsDisplay key='ChipsDisplay' />
-      }
-    </AnimatePresence>
+    <div className='ScreenSelector'>
+      <AnimatePresence exitBeforeEnter>
+        {
+          result
+            ? <ResultScreen key='ResultScreen' />
+            : <ChipsDisplay key='ChipsDisplay' />
+        }
+      </AnimatePresence>
+      <div className='ScreenSelector__container'>
+        <Btn type='border'>Rules</Btn>
+      </div>
+    </div>
   )
 }
 

@@ -7,7 +7,7 @@ const Btn = (props) => {
   const { type, to, href, ...rest } = props
   let classes = 'Btn'
 
-  if (type) classes += ` ${type}`
+  if (type) classes += ` Btn--${type}`
 
   if (to) {
     return (
