@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { AnimatePresence } from 'framer-motion'
+import { setGameType } from '../../store'
 
 import ChipsDisplay from '../ChipsDisplay/ChipsDisplay'
 import ResultScreen from '../ResultScreen/ResultScreen'
 import Btn from '../Btn/Btn'
-
-import { setGameType } from '../../store'
+import './ScreenSelector.css'
 
 const ScreenSelector = ({ match }) => {
   const result = useSelector(store => store.result)
@@ -27,7 +27,7 @@ const ScreenSelector = ({ match }) => {
         }
       </AnimatePresence>
       <div className='ScreenSelector__container'>
-        <Btn type='border'>Rules</Btn>
+        <Btn to='rules' type='border'>Rules</Btn>
       </div>
     </div>
   )

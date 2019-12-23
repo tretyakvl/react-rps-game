@@ -16,6 +16,7 @@
 }
 
 .Btn--border {
+  min-width: auto;
   padding: 0 2.25rem;
 
   color: var(--lightText);
