@@ -22,7 +22,6 @@
   background: linear-gradient(to top, hsl(280, 11%, 95%), hsl(0, 0%, 86%));
   border-radius: 50%;
   box-shadow: 0 6px hsl(230, 21%, 78%) inset;
-
 }
 
 .Chip__image img {

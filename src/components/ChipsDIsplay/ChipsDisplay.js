@@ -27,7 +27,7 @@ const ChipsDisplay = ({ match }) => {
     <div
       className={`ChipsDisplay ChipsDisplay--${gameType}`}
     >
-      <img src={imgSelector[gameType]} />
+      <img src={imgSelector[gameType]} alt='' />
       {chips.map(type => (
         <Chip type={type} key={type} />
       ))}
