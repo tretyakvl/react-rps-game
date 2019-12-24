@@ -28,10 +28,10 @@ const ScreenSelector = ({ match }) => {
             ? <ResultScreen key='ResultScreen' />
             : <ChipsDisplay key='ChipsDisplay' />
         }
+        <div className='ScreenSelector__container'>
+          <Btn to={`${url}/rules`} type='border'>Rules</Btn>
+        </div>
       </AnimatePresence>
-      <div className='ScreenSelector__container'>
-        <Btn to={`${url}/rules`} type='border'>Rules</Btn>
-      </div>
 
       <Switch>
         <Route
