@@ -41,7 +41,7 @@
 .ResultScreen__result {
   order: 3;
 
-  width: 250px;
+  width: 15.625rem;
   margin: 4.6rem auto 0;
 
   text-align: center;
@@ -58,7 +58,13 @@
   text-transform: uppercase;
 }
 
-@media(min-width: 700px) {
+@media(max-width: 43.75rem) {
+  .ResultScreen__result {
+    margin: 4.6rem auto 0 !important;
+  }
+}
+
+@media(min-width: 43.75rem) {
   .ResultScreen {
     flex-wrap: nowrap;
     align-items: flex-end;
