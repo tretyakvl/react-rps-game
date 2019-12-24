@@ -35,7 +35,6 @@ const ResultScreen = () => {
       <div className='ResultScreen__chip'>
         <motion.div
           className='ResultScreen__backdrop'
-          exit={{ opacity: 0 }}
           {...(result === STATUSES.WIN ? winAnimation : {})}
         >
           <Chip
@@ -54,7 +53,6 @@ const ResultScreen = () => {
           marginRight: ['0rem', '3.5rem', '3.5rem', '3.5rem'],
           opacity: [0, 0, 0, 1]
         }}
-        exit={{ opacity: 0 }}
         transition={{
           delay: 1.5
         }}
@@ -65,7 +63,6 @@ const ResultScreen = () => {
       <div className='ResultScreen__chip'>
         <motion.div
           className='ResultScreen__backdrop'
-          exit={{ opacity: 0 }}
           {...(result === STATUSES.LOSE ? winAnimation : {})}
         >
           <Chip

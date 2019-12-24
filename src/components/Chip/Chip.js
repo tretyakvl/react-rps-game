@@ -30,7 +30,6 @@ const Chip = props => {
     <motion.button
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
       className={`Chip Chip--${type}`} onClick={onClick}
       {...rest}
     >

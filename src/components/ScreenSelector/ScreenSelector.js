@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import { useRouteMatch, Switch, Route } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
-import { AnimatePresence } from 'framer-motion'
 import { setGameType } from '../../store'
 
 import Rules from '../Rules/Rules'
@@ -22,16 +21,14 @@ const ScreenSelector = ({ match }) => {
 
   return (
     <div className='ScreenSelector'>
-      <AnimatePresence exitBeforeEnter>
-        {
-          result
-            ? <ResultScreen key='ResultScreen' />
-            : <ChipsDisplay key='ChipsDisplay' />
-        }
-        <div className='ScreenSelector__container'>
-          <Btn to={`${url}/rules`} type='border'>Rules</Btn>
-        </div>
-      </AnimatePresence>
+      {
+        result
+          ? <ResultScreen key='ResultScreen' />
+          : <ChipsDisplay key='ChipsDisplay' />
+      }
+      <div className='ScreenSelector__container'>
+        <Btn to={`${url}/rules`} type='border'>Rules</Btn>
+      </div>
 
       <Switch>
         <Route
