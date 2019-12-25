@@ -38,11 +38,14 @@ const TypeSelector = () => {
     <Router>
       <Switch>
         <Route
-          path={[`/${STANDART}`, `/${LIZARD_SPOCK}`]}
+          path={[
+            `/react-rps-game/${STANDART}`,
+            `/react-rps-game/${LIZARD_SPOCK}`
+          ]}
           component={ScreenSelector}
         />
         <Route
-          path='/'
+          path='/react-rps-game'
           component={SelectorDisplay}
         />
       </Switch>
