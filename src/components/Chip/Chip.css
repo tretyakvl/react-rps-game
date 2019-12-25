@@ -1,5 +1,5 @@
 .Chip {
-  display: flex;
+  position: relative;
 
   width: 8.125rem;
   height: 8.125rem;
@@ -14,10 +14,15 @@
 }
 
 .Chip__image {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  left: 1rem;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-grow: 1;
 
   background: linear-gradient(to top, hsl(280, 11%, 95%), hsl(0, 0%, 86%));
   border-radius: 50%;
@@ -62,6 +67,13 @@
     width: 12.2rem;
     height: 12.2rem;
     padding: 1.2rem;
+  }
+
+  .Chip__image {
+    top: 1.2rem;
+    right: 1.2rem;
+    bottom: 1.2rem;
+    left: 1.2rem;
   }
 
   .Chip__image img {
