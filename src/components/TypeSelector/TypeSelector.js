@@ -19,12 +19,12 @@ const SelectorDisplay = () => {
       <h2>Select game type</h2>
       <ul>
         <li>
-          <Btn to='/standart'>
+          <Btn to='/react-rps-game/standart'>
               Standart
           </Btn>
         </li>
         <li>
-          <Btn to='/lizard-spock'>
+          <Btn to='/react-rps-game/lizard-spock'>
               Lizard spock
           </Btn>
         </li>
