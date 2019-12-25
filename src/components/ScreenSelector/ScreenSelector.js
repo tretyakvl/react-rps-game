@@ -17,7 +17,7 @@ const ScreenSelector = ({ match }) => {
 
   useEffect(() => {
     dispatch(setGameType(gameType))
-  })
+  }, [gameType, dispatch])
 
   return (
     <div className='ScreenSelector'>
