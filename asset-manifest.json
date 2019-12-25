@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/react-rps-game/static/css/main.3badf215.chunk.css",
+    "main.css": "/react-rps-game/static/css/main.50f9247e.chunk.css",
     "main.js": "/react-rps-game/static/js/main.3263dbeb.chunk.js",
     "main.js.map": "/react-rps-game/static/js/main.3263dbeb.chunk.js.map",
     "runtime-main.js": "/react-rps-game/static/js/runtime-main.73c8cfef.js",
@@ -8,9 +8,9 @@
     "static/js/2.44691743.chunk.js": "/react-rps-game/static/js/2.44691743.chunk.js",
     "static/js/2.44691743.chunk.js.map": "/react-rps-game/static/js/2.44691743.chunk.js.map",
     "index.html": "/react-rps-game/index.html",
-    "precache-manifest.8689c36ee7675380383733ad9a131f11.js": "/react-rps-game/precache-manifest.8689c36ee7675380383733ad9a131f11.js",
+    "precache-manifest.19962cf1953953b38de059e2715f7e34.js": "/react-rps-game/precache-manifest.19962cf1953953b38de059e2715f7e34.js",
     "service-worker.js": "/react-rps-game/service-worker.js",
-    "static/css/main.3badf215.chunk.css.map": "/react-rps-game/static/css/main.3badf215.chunk.css.map",
+    "static/css/main.50f9247e.chunk.css.map": "/react-rps-game/static/css/main.50f9247e.chunk.css.map",
     "static/media/bg-pentagon.svg": "/react-rps-game/static/media/bg-pentagon.07cdd3ea.svg",
     "static/media/bg-triangle.svg": "/react-rps-game/static/media/bg-triangle.60a30ae9.svg",
     "static/media/icon-close.919ab92a.svg": "/react-rps-game/static/media/icon-close.919ab92a.svg",
@@ -25,7 +25,7 @@
   "entrypoints": [
     "static/js/runtime-main.73c8cfef.js",
     "static/js/2.44691743.chunk.js",
-    "static/css/main.3badf215.chunk.css",
+    "static/css/main.50f9247e.chunk.css",
     "static/js/main.3263dbeb.chunk.js"
   ]
 }
