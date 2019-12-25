@@ -8,6 +8,7 @@
   width: 55vw;
   min-width: 12.5rem;
   max-width: 18.75rem;
+  min-height: 12.5rem;
   height: auto;
 }
 
