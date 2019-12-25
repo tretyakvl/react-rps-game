@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/react-rps-game/static/css/main.3badf215.chunk.css",
-    "main.js": "/react-rps-game/static/js/main.b0d1b12c.chunk.js",
-    "main.js.map": "/react-rps-game/static/js/main.b0d1b12c.chunk.js.map",
+    "main.js": "/react-rps-game/static/js/main.f0fcf76f.chunk.js",
+    "main.js.map": "/react-rps-game/static/js/main.f0fcf76f.chunk.js.map",
     "runtime-main.js": "/react-rps-game/static/js/runtime-main.73c8cfef.js",
     "runtime-main.js.map": "/react-rps-game/static/js/runtime-main.73c8cfef.js.map",
     "static/js/2.44691743.chunk.js": "/react-rps-game/static/js/2.44691743.chunk.js",
     "static/js/2.44691743.chunk.js.map": "/react-rps-game/static/js/2.44691743.chunk.js.map",
     "index.html": "/react-rps-game/index.html",
-    "precache-manifest.ac14612bcba7dbc592b9ca55d08b4b03.js": "/react-rps-game/precache-manifest.ac14612bcba7dbc592b9ca55d08b4b03.js",
+    "precache-manifest.5fdaa4a52fb8687d27cf15c128a3ea75.js": "/react-rps-game/precache-manifest.5fdaa4a52fb8687d27cf15c128a3ea75.js",
     "service-worker.js": "/react-rps-game/service-worker.js",
     "static/css/main.3badf215.chunk.css.map": "/react-rps-game/static/css/main.3badf215.chunk.css.map",
     "static/media/bg-pentagon.svg": "/react-rps-game/static/media/bg-pentagon.07cdd3ea.svg",
@@ -26,6 +26,6 @@
     "static/js/runtime-main.73c8cfef.js",
     "static/js/2.44691743.chunk.js",
     "static/css/main.3badf215.chunk.css",
-    "static/js/main.b0d1b12c.chunk.js"
+    "static/js/main.f0fcf76f.chunk.js"
   ]
 }
