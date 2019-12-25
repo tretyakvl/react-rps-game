@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/react-rps-game/static/css/main.3badf215.chunk.css",
+    "main.js": "/react-rps-game/static/js/main.6fcd66cb.chunk.js",
+    "main.js.map": "/react-rps-game/static/js/main.6fcd66cb.chunk.js.map",
+    "runtime-main.js": "/react-rps-game/static/js/runtime-main.73c8cfef.js",
+    "runtime-main.js.map": "/react-rps-game/static/js/runtime-main.73c8cfef.js.map",
+    "static/js/2.44691743.chunk.js": "/react-rps-game/static/js/2.44691743.chunk.js",
+    "static/js/2.44691743.chunk.js.map": "/react-rps-game/static/js/2.44691743.chunk.js.map",
+    "index.html": "/react-rps-game/index.html",
+    "precache-manifest.9a2869f53c97ce69883430d70868d343.js": "/react-rps-game/precache-manifest.9a2869f53c97ce69883430d70868d343.js",
+    "service-worker.js": "/react-rps-game/service-worker.js",
+    "static/css/main.3badf215.chunk.css.map": "/react-rps-game/static/css/main.3badf215.chunk.css.map",
+    "static/media/bg-pentagon.svg": "/react-rps-game/static/media/bg-pentagon.07cdd3ea.svg",
+    "static/media/bg-triangle.svg": "/react-rps-game/static/media/bg-triangle.60a30ae9.svg",
+    "static/media/icon-close.919ab92a.svg": "/react-rps-game/static/media/icon-close.919ab92a.svg",
+    "static/media/icon-lizard.svg": "/react-rps-game/static/media/icon-lizard.7d2e0b18.svg",
+    "static/media/icon-paper.svg": "/react-rps-game/static/media/icon-paper.69a8c2e9.svg",
+    "static/media/icon-rock.svg": "/react-rps-game/static/media/icon-rock.8ce1e109.svg",
+    "static/media/icon-scissors.svg": "/react-rps-game/static/media/icon-scissors.bec2f9b3.svg",
+    "static/media/icon-spock.svg": "/react-rps-game/static/media/icon-spock.b6446e8e.svg",
+    "static/media/image-rules-bonus.svg": "/react-rps-game/static/media/image-rules-bonus.f19a40fb.svg",
+    "static/media/image-rules.svg": "/react-rps-game/static/media/image-rules.5d74d25d.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.73c8cfef.js",
+    "static/js/2.44691743.chunk.js",
+    "static/css/main.3badf215.chunk.css",
+    "static/js/main.6fcd66cb.chunk.js"
+  ]
+}
