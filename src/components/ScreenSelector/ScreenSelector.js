@@ -11,7 +11,7 @@ import './ScreenSelector.css'
 
 const ScreenSelector = ({ match }) => {
   const result = useSelector(store => store.result)
-  const gameType = match.path.slice(1)
+  const gameType = match.path.match(/[a-z-]+$/)[0]
   const dispatch = useDispatch()
   const { path, url } = useRouteMatch()
 
